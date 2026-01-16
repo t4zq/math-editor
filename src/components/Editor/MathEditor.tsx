@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
-import { useEditor, EditorContent } from '@tiptap/react';
+import { useEditor, EditorContent, Editor } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import { MathTerm } from '../../data/math-terms';
 import { searchMathTerms, getLastWord } from '../../utils/japanese-math-parser';
@@ -26,7 +26,7 @@ export const MathEditor = () => {
   });
 
   // 予測候補を更新する関数
-  const updateSuggestions = (editor: any) => {
+  const updateSuggestions = (editor: Editor) => {
     const { state } = editor;
     const { from } = state.selection;
     const text = editor.getText();
@@ -49,7 +49,7 @@ export const MathEditor = () => {
   };
 
   // サジェストリストの位置を更新
-  const updateSuggestionPosition = (editor: any) => {
+  const updateSuggestionPosition = (editor: Editor) => {
     if (!editorRef.current) return;
 
     const { state } = editor;
