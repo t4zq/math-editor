@@ -17,6 +17,10 @@ export const MathEditor = () => {
     editorProps: {
       attributes: {
         class: 'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl focus:outline-none min-h-[300px] p-4',
+        autocomplete: 'off',
+        autocorrect: 'off',
+        autocapitalize: 'off',
+        spellcheck: 'false',
       },
     },
     onUpdate: ({ editor }) => {
