@@ -1,4 +1,3 @@
-import React from 'react';
 import { MathTerm } from '../../data/math-terms';
 import { SuggestionItem } from './SuggestionItem';
 
@@ -10,13 +9,13 @@ interface SuggestionListProps {
   onHover: (index: number) => void;
 }
 
-export const SuggestionList: React.FC<SuggestionListProps> = ({
+export const SuggestionList = ({
   suggestions,
   selectedIndex,
   position,
   onSelect,
   onHover,
-}) => {
+}: SuggestionListProps) => {
   if (suggestions.length === 0) {
     return null;
   }

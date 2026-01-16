@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
 import { MathTerm } from '../../data/math-terms';
 import { searchMathTerms, getLastWord } from '../../utils/japanese-math-parser';
 import { SuggestionList } from '../Suggestions/SuggestionList';
 
-export const MathEditor: React.FC = () => {
+export const MathEditor = () => {
   const [suggestions, setSuggestions] = useState<MathTerm[]>([]);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [suggestionPosition, setSuggestionPosition] = useState({ top: 0, left: 0 });

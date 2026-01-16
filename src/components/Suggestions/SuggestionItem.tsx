@@ -1,4 +1,3 @@
-import React from 'react';
 import katex from 'katex';
 import { MathTerm } from '../../data/math-terms';
 
@@ -9,12 +8,12 @@ interface SuggestionItemProps {
   onMouseEnter: () => void;
 }
 
-export const SuggestionItem: React.FC<SuggestionItemProps> = ({
+export const SuggestionItem = ({
   term,
   isSelected,
   onClick,
   onMouseEnter,
-}) => {
+}: SuggestionItemProps) => {
   // KaTeXでLaTeXをレンダリング
   const renderLatex = (latex: string): string => {
     try {

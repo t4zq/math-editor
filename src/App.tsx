@@ -1,4 +1,3 @@
-import React from 'react';
 import { MathEditor } from './components/Editor/MathEditor';
 import 'katex/dist/katex.min.css';
 
